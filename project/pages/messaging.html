@@ -1,0 +1,33 @@
+<body>
+    <nav class="neu-nav">
+        <ul>
+            <li><a href="../index.html">Feed</a></li>
+            <li><a href="messaging.html" class="active">Messages</a></li>
+            <li><a href="friends.html">Amis</a></li>
+        </ul>
+    </nav>
+
+    <div class="messaging-container">
+        <div class="conversations-list neu-card">
+            <!-- La liste des conversations sera injectée ici -->
+        </div>
+        <div class="chat-window neu-card">
+            <div class="chat-header">
+                <!-- L'en-tête du chat sera injecté ici -->
+            </div>
+            <div class="messages-container">
+                <!-- Les messages seront injectés ici -->
+            </div>
+            <form class="message-form">
+                <input type="text" class="neu-input message-input" placeholder="Écrivez votre message...">
+                <button type="submit" class="neu-button send-button">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/utils/dom.js"></script>
+    <script src="../js/components/Messaging.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

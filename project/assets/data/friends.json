@@ -1,0 +1,22 @@
+{
+    "friends": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "profilePicture": "/assets/images/profile-pictures/user1.png",
+            "status": "online"
+        },
+        {
+            "id": 2,
+            "name": "Marie Martin",
+            "profilePicture": "/assets/images/profile-pictures/user2.jpg",
+            "status": "online"
+        },
+        {
+            "id": 3,
+            "name": "Pierre Durand",
+            "profilePicture": "/assets/images/profile-pictures/user3.png",
+            "status": "offline"
+        }
+    ]
+}

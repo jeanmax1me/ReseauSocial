@@ -1,0 +1,132 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "author": {
+                "name": "John Doe",
+                "profilePicture": "assets/images/profile-pictures/user1.png"
+            },
+            "content": "Ceci est un exemple de post.",
+            "timestamp": "2024-10-24T12:00:00Z",
+            "image": "assets/images/posts/voyage1.png",
+            "reactions": {
+                "like": 10,
+                "dislike": 2,
+                "love": 5
+            },
+            "comments": [
+                {
+                    "id": 101,
+                    "author": {
+                        "name": "Jane Smith",
+                        "profilePicture": "assets/images/profile-pictures/user2.jpg"
+                    },
+                    "content": "Super post !",
+                    "timestamp": "2024-10-24T12:30:00Z",
+                    "reactions": {
+                        "like": 3,
+                        "dislike": 0,
+                        "love": 1
+                    },
+                    "replies": [
+                        {
+                            "id": 1001,
+                            "author": {
+                                "name": "Alice Johnson",
+                                "profilePicture": "assets/images/profile-pictures/user3.png"
+                            },
+                            "content": "Je suis d'accord, c'est vraiment intéressant !",
+                            "timestamp": "2024-10-24T13:00:00Z",
+                            "reactions": {
+                                "like": 2,
+                                "dislike": 0,
+                                "love": 0
+                            },
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "author": {
+                "name": "Jane Smith",
+                "profilePicture": "assets/images/profile-pictures/user2.jpg"
+            },
+            "content": "Voici un autre post pour tester.",
+            "timestamp": "2024-10-25T14:00:00Z",
+            "image": "assets/images/posts/voyage2.jpg",
+            "reactions": {
+                "like": 15,
+                "dislike": 1,
+                "love": 8
+            },
+            "comments": [
+                {
+                    "id": 201,
+                    "author": {
+                        "name": "John Doe",
+                        "profilePicture": "assets/images/profile-pictures/user1.png"
+                    },
+                    "content": "Intéressant !",
+                    "timestamp": "2024-10-25T14:30:00Z",
+                    "reactions": {
+                        "like": 5,
+                        "dislike": 0,
+                        "love": 2
+                    },
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "author": {
+                "name": "Alice Johnson",
+                "profilePicture": "assets/images/profile-pictures/user3.png"
+            },
+            "content": "Dernier post pour vérifier l'affichage.",
+            "timestamp": "2024-10-26T16:00:00Z",
+            "image": "assets/images/posts/voyage3.png",
+            "reactions": {
+                "like": 20,
+                "dislike": 0,
+                "love": 12
+            },
+            "comments": [
+                {
+                    "id": 301,
+                    "author": {
+                        "name": "Jane Smith",
+                        "profilePicture": "assets/images/profile-pictures/user2.jpg"
+                    },
+                    "content": "J'adore ce post !",
+                    "timestamp": "2024-10-26T16:30:00Z",
+                    "reactions": {
+                        "like": 7,
+                        "dislike": 0,
+                        "love": 3
+                    },
+                    "replies": [
+                        {
+                            "id": 3001,
+                            "author": {
+                                "name": "John Doe",
+                                "profilePicture": "assets/images/profile-pictures/user1.png"
+                            },
+                            "content": "Moi aussi, c'est vraiment bien fait !",
+                            "timestamp": "2024-10-26T17:00:00Z",
+                            "reactions": {
+                                "like": 3,
+                                "dislike": 0,
+                                "love": 1
+                            },
+                            "replies": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
