@@ -3,13 +3,17 @@ import { ParticleSystem } from '../utils/particles.js';
 
 export class Feed {
     constructor() {
+        // Initialisation du système de particules pour les animations
         this.particleSystem = new ParticleSystem();
+        // Tableau pour stocker les posts
         this.posts = [];
+        // Conteneur DOM pour les posts
         this.container = document.getElementById('posts-container');
     }
 
     async init() {
         try {
+            // Chargement des posts depuis le fichier JSON
             const response = await fetch('./assets/data/posts.json');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -23,29 +27,24 @@ export class Feed {
     }
 
     createPostElement(post) {
-        console.log('Creating post element:', post); // Debug log
+        // Création de l'élément article pour le post
         const postEl = createElement('article', 'neu-card post');
 
-        // Header
-        console.log('Author data:', post.author); // Debug log
+        // Ajout du header, contenu, image, réactions et commentaires
         const header = this.createHeader(post.author, post.timestamp);
         postEl.appendChild(header);
 
-        // Content
         const content = createElement('p', 'post-content', post.content);
         postEl.appendChild(content);
 
-        // Image
         if (post.image) {
             const imgContainer = this.createImageContainer(post.image);
             postEl.appendChild(imgContainer);
         }
 
-        // Reactions
         const reactions = this.createReactions(post);
         postEl.appendChild(reactions);
 
-        // Comments Section
         const commentsSection = this.createCommentsSection(post);
         postEl.appendChild(commentsSection);
 
@@ -61,7 +60,6 @@ export class Feed {
         const authorInfo = createElement('div', 'author-info');
         authorInfo.appendChild(createElement('h3', '', author.name));
         const formattedDate = formatDate(timestamp);
-        console.log('Timestamp:', timestamp, 'Formatted:', formattedDate); // Debug log
         authorInfo.appendChild(createElement('span', 'timestamp', formattedDate));
 
         header.appendChild(authorImg);
@@ -131,13 +129,14 @@ export class Feed {
     }
 
     handleReaction(event, postId, type) {
+        // Gestion des réactions aux posts
         const post = this.posts.find(p => p.id === postId);
         if (post) {
             post.reactions[type]++;
             const countEl = event.currentTarget.querySelector('.reaction-count');
             countEl.textContent = post.reactions[type].toString();
 
-            // Create particle animation
+            // Création de l'animation de particules
             const rect = event.currentTarget.getBoundingClientRect();
             const x = rect.left + rect.width / 2;
             const y = rect.top + rect.height / 2;
@@ -146,6 +145,7 @@ export class Feed {
     }
 
     showImageFullscreen(imageSrc) {
+        // Affichage de l'image en plein écran
         const overlay = createElement('div', 'fullscreen-overlay');
         const img = createElement('img', 'fullscreen-image');
         img.src = imageSrc;
@@ -156,14 +156,17 @@ export class Feed {
     }
 
     createCommentsSection(post) {
+        // Création de la section des commentaires
         const section = createElement('div', 'comments-section');
         const comments = createElement('div', 'comments');
 
+        // Ajout des commentaires existants
         post.comments.forEach(comment => {
             const commentEl = this.createCommentElement(comment);
             comments.appendChild(commentEl);
         });
 
+        // Création du formulaire pour ajouter un nouveau commentaire
         const form = createElement('form', 'comment-form');
         const input = createElement('input', 'neu-input', '');
         input.placeholder = 'Ajouter un commentaire...';
@@ -175,6 +178,7 @@ export class Feed {
         form.onsubmit = (e) => {
             e.preventDefault();
             if (input.value.trim()) {
+                // Ajout du nouveau commentaire
                 const newComment = {
                     id: Date.now(),
                     author: {
@@ -278,6 +282,7 @@ export class Feed {
     }
 
     render() {
+        // Rendu de tous les posts
         this.container.innerHTML = '';
         this.posts.forEach(post => {
             const postEl = this.createPostElement(post);

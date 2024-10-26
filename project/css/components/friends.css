@@ -1,25 +1,93 @@
-.friends-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.friend {
+.friends-container {
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
-    background: #e0e0e0;
+    background: var(--background);
+    border-radius: 15px;
+    box-shadow:
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+}
+
+#friend-filter {
+    width: calc(100% - 30px);
+    /* Ajustement de la largeur */
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border: none;
     border-radius: 10px;
-    box-shadow: 8px 8px 15px #bcbcbc, -8px -8px 15px #ffffff;
+    background: var(--background);
+    box-shadow:
+        inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
+}
+
+.friends-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.friend-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    cursor: grab;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: var(--background);
+    border-radius: 10px;
+    cursor: move;
+    transition: all 0.3s ease;
+    box-shadow:
+        4px 4px 8px var(--shadow-dark),
+        -4px -4px 8px var(--shadow-light);
 }
 
-.friend p {
-    margin: 0;
+.friend-item:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        6px 6px 12px var(--shadow-dark),
+        -6px -6px 12px var(--shadow-light);
 }
 
-.friend a {
+.friend-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    box-shadow:
+        2px 2px 4px var(--shadow-dark),
+        -2px -2px 4px var(--shadow-light);
+}
+
+.friend-name {
+    flex-grow: 1;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.message-link {
     text-decoration: none;
-    color: #333;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: var(--background);
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow:
+        4px 4px 8px var(--shadow-dark),
+        -4px -4px 8px var(--shadow-light);
+}
+
+.message-link:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        6px 6px 12px var(--shadow-dark),
+        -6px -6px 12px var(--shadow-light);
+}
+
+.friend-item.dragging {
+    opacity: 0.5;
+    box-shadow:
+        2px 2px 4px var(--shadow-dark),
+        -2px -2px 4px var(--shadow-light);
 }

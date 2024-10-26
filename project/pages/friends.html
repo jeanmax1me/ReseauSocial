@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amis</title>
+    <title>Liste d'amis</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/components/friends.css">
     <link rel="stylesheet" href="../css/components/neumorphism.css">
@@ -17,13 +17,29 @@
         <a href="messaging.html">Messagerie</a>
     </nav>
 
-    <div class="friends-list neu-card">
-        <!-- Les amis seront injectés ici -->
+    <div class="friends-container neu-card">
+        <input type="text" id="friend-filter" class="neu-input" placeholder="Filtrer les amis...">
+
+        <ul id="friends-list" class="friends-list">
+            <li class="friend-item" draggable="true">
+                <img src="../assets/images/profile-pictures/user1.png" alt="John Doe" class="friend-avatar">
+                <span class="friend-name">John Doe</span>
+                <a href="messaging.html" class="message-link neu-button">Message</a>
+            </li>
+            <li class="friend-item" draggable="true">
+                <img src="../assets/images/profile-pictures/user2.jpg" alt="Jane Smith" class="friend-avatar">
+                <span class="friend-name">Jane Smith</span>
+                <a href="messaging.html" class="message-link neu-button">Message</a>
+            </li>
+            <li class="friend-item" draggable="true">
+                <img src="../assets/images/profile-pictures/user3.png" alt="Bob Johnson" class="friend-avatar">
+                <span class="friend-name">Bob Johnson</span>
+                <a href="messaging.html" class="message-link neu-button">Message</a>
+            </li>
+            <!-- Ajoutez d'autres amis ici -->
+        </ul>
     </div>
 
-    <!-- Scripts -->
-    <script type="module" src="../js/app.js"></script>
-    <script type="module" src="../js/utils/dom.js"></script>
     <script type="module" src="../js/components/Friends.js"></script>
 </body>
 
