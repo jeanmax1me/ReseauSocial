@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amis</title>
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/components/friends.css">
+    <link rel="stylesheet" href="../css/components/neumorphism.css">
 </head>
 
 <body>
-    <nav class="neu-nav">
-        <ul>
-            <li><a href="../index.html">Feed</a></li>
-            <li><a href="messaging.html">Messages</a></li>
-            <li><a href="friends.html" class="active">Amis</a></li>
-        </ul>
+    <nav>
+        <a href="../index.html">Feed</a>
+        <a href="friends.html" class="active">Amis</a>
+        <a href="messaging.html">Messagerie</a>
     </nav>
 
     <div class="friends-list neu-card">
@@ -22,9 +22,9 @@
     </div>
 
     <!-- Scripts -->
-    <script src="../js/utils/dom.js"></script>
-    <script src="../js/components/Friends.js"></script>
-    <script src="../js/app.js"></script>
+    <script type="module" src="../js/app.js"></script>
+    <script type="module" src="../js/utils/dom.js"></script>
+    <script type="module" src="../js/components/Friends.js"></script>
 </body>
 
 </html>

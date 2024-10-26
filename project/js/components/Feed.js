@@ -309,4 +309,16 @@ export class Feed {
 
         return postElement;
     }
+
+    showFullscreenImage(imageSrc) {
+        const overlay = createElement('div', 'fullscreen-overlay');
+        const image = createElement('img', 'fullscreen-image');
+        image.src = imageSrc;
+        overlay.appendChild(image);
+        document.body.appendChild(overlay);
+
+        overlay.addEventListener('click', () => {
+            overlay.remove();
+        });
+    }
 }

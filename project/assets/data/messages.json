@@ -5,7 +5,7 @@
             "with": {
                 "id": 2,
                 "name": "Marie Martin",
-                "profilePicture": "assets/images/profile-pictures/user2.jpg",
+                "profilePicture": "/project/assets/images/profile-pictures/user2.jpg",
                 "status": "online"
             },
             "messages": [
@@ -26,6 +26,18 @@
                     "senderId": 2,
                     "content": "Super ! Tu as vu le nouveau design du site ?",
                     "timestamp": "2024-01-01T10:02:00"
+                },
+                {
+                    "id": 4,
+                    "senderId": 1,
+                    "content": "Oui, j'adore ! C'est tellement plus intuitif maintenant.",
+                    "timestamp": "2024-01-01T10:05:00"
+                },
+                {
+                    "id": 5,
+                    "senderId": 2,
+                    "content": "Totalement d'accord ! On devrait organiser une réunion pour en discuter plus en détail.",
+                    "timestamp": "2024-01-01T10:10:00"
                 }
             ]
         },
@@ -34,7 +46,7 @@
             "with": {
                 "id": 3,
                 "name": "Pierre Durand",
-                "profilePicture": "assets/images/profile-pictures/user3.png",
+                "profilePicture": "/project/assets/images/profile-pictures/user3.png",
                 "status": "offline"
             },
             "messages": [
@@ -43,6 +55,65 @@
                     "senderId": 1,
                     "content": "Bonjour Pierre !",
                     "timestamp": "2024-01-01T09:00:00"
+                },
+                {
+                    "id": 2,
+                    "senderId": 3,
+                    "content": "Bonjour ! Comment puis-je t'aider aujourd'hui ?",
+                    "timestamp": "2024-01-01T09:05:00"
+                },
+                {
+                    "id": 3,
+                    "senderId": 1,
+                    "content": "J'aurais besoin de ton avis sur le projet X. Tu as un moment ?",
+                    "timestamp": "2024-01-01T09:10:00"
+                },
+                {
+                    "id": 4,
+                    "senderId": 3,
+                    "content": "Bien sûr, je suis disponible dans une heure. Ça te convient ?",
+                    "timestamp": "2024-01-01T09:15:00"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "with": {
+                "id": 4,
+                "name": "Sophie Lefebvre",
+                "profilePicture": "/project/assets/images/profile-pictures/user1.png",
+                "status": "away"
+            },
+            "messages": [
+                {
+                    "id": 1,
+                    "senderId": 4,
+                    "content": "Salut ! J'ai une question sur le rapport mensuel.",
+                    "timestamp": "2024-01-02T14:00:00"
+                },
+                {
+                    "id": 2,
+                    "senderId": 1,
+                    "content": "Bien sûr, je t'écoute. Quelle est ta question ?",
+                    "timestamp": "2024-01-02T14:05:00"
+                },
+                {
+                    "id": 3,
+                    "senderId": 4,
+                    "content": "Je ne comprends pas bien la section sur les prévisions. Peux-tu m'expliquer ?",
+                    "timestamp": "2024-01-02T14:10:00"
+                },
+                {
+                    "id": 4,
+                    "senderId": 1,
+                    "content": "Pas de problème. Les prévisions sont basées sur les données des trois derniers mois. On utilise une moyenne pondérée pour estimer les tendances futures.",
+                    "timestamp": "2024-01-02T14:15:00"
+                },
+                {
+                    "id": 5,
+                    "senderId": 4,
+                    "content": "Ah, je vois ! Merci beaucoup pour l'explication.",
+                    "timestamp": "2024-01-02T14:20:00"
                 }
             ]
         }

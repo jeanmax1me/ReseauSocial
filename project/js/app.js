@@ -1,12 +1,13 @@
 // js/app.js
 import { Feed } from './components/Feed.js';
+import { Messaging } from './components/Messaging.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const feed = new Feed();
-    feed.init();
-});
+    if (document.getElementById('posts-container')) {
+        const feed = new Feed();
+        feed.init();
+    }
 
-document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.messaging-container')) {
         const messaging = new Messaging();
         messaging.init();
