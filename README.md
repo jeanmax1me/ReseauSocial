@@ -8,7 +8,6 @@ Social est une application de réseau social moderne qui permet aux utilisateurs
 - [Technologies utilisées](#technologies-utilisées)
 - [Installation](#installation)
 - [Utilisation](#utilisation)
-- [Contribuer](#contribuer)
 - [Licence](#licence)
 
 ## Fonctionnalités
